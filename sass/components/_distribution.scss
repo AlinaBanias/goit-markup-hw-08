@@ -1,0 +1,69 @@
+.form-footer {
+    width: 578px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 93px;
+    margin-bottom: 23px;
+  }
+  .form-field-footer {
+    display: flex;
+    gap: 12px;
+  }
+  .form-strong {
+    margin-bottom: 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--light-text-color);
+  }
+  .form-input-footer {
+    width: 358px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: transparent;
+  
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+  
+    color: var(--light-text-color);
+  }
+  .form-input-footer::placeholder{
+    color:rgba(255, 255, 255, 0.6);
+  }
+  .form-button-footer {
+    display: flex;
+    gap: 10px;
+    padding: 10px 32px;
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    align-items: center;
+    letter-spacing: 0.06em;
+
+    border: 0;
+    border-radius: 4px;
+  }
+  
+  .button-icon-footer {
+    align-items: center;
+  }
