@@ -1,17 +1,80 @@
 .header {
+  position: relative;
     border: 1px solid #ececec;
 
     &__container {
       display: flex;
       align-items: center;
+      // mobile only
+      justify-content: space-between;
     }
   }
+  .menu__button{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+
+    & .icon__cross{
+      opacity: 0
+    }
+    &.is-open .icon__cross{
+      opacity: 1;
+    }
+    &.is-open .icon__menu{
+      opacity: 0;
+    }
+  }
+  .menu__container{
+
+    @media screen and (max-width: 767px){
+      
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    @media screen and (min-width: 768px){
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+
+     
+    }
+    &.is-open{
+      display: block;
+    }
+
+    
+  }
+  .menu__contacts{
+    display: block;
+    @media screen and (min-width: 768px){
+      display: flex;
+    }
+  }
+  
   .nav {
     display: flex;
+    justify-content: space-between;
 
     &__list {
-      display: flex;
+      // display: flex;
+      display: block;
       margin-left: 93px;
+
+      @media screen and (min-width: 768px){
+        display: flex;
+      }
     }
     &__link {
       position: relative;
@@ -35,7 +98,9 @@
     letter-spacing: 0.02;
     text-decoration: none;
 
-   
+  //  @media screen and (min-width: 768){
+  //   display: flex;
+  //  }
     
   }
   .nav__list .nav__link:hover,
@@ -66,6 +131,8 @@
     display: flex;
     margin-left: auto;
     align-items: center;
+
+    
    
   }
   .contacts__link {

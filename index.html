@@ -21,44 +21,63 @@
 
 <body>
     <!--Header section -->
-<!-- <header class="header">
+<header class="header">
     <div class="container header__container">
     <nav class="nav">
-        <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
-        
-    
-    <ul class="nav__list list">
-        <li class="nav__item">
-            <a href="./index.html" class="nav__link current">Студія</a>
-        </li>
-        <li class="nav__item">
-            <a href="./portfolio.html" class="nav__link">Портфоліо</a>
-        </li>
-        <li class="nav__item">
-            <a href="" class="nav__link">Контакти</a>
-        </li>
-    </ul>
-    </nav>
-    <ul class="contacts list">
-        <li class="contacts__item">
-           <a class="contacts__link" href="mailto:info@devstudio.com" >
-            <svg class="contacts__icon" width="20" height="16" >
-            <use href="./images/icons.svg#icon-envelope" ></use>
-           </svg>
-           info@devstudio.com</a>
-        </li>
-        <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111" >
-                <svg class="contacts__icon" width="14" height="20" >
-                <use href="./images/icons.svg#icon-smartphone" ></use>
-               </svg>
-               +38 096 111 11 11</a>
-        </li>
-        
-    </ul>
-    </div>
 
-</header> -->
+        <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
+       
+       <button type="button"
+     class="menu__button "
+     aria-expanded="false"
+     aria-controls="menu__container"
+      data-menu-button>
+        <svg  width="40" height="40" aria-label="Перемикач мобільного вікна" >
+            <use class="icon__menu" href="./images/icons.svg#icon-header-menu" ></use>
+            <use class="icon__cross" href="./images/icons.svg#icon-header-close" ></use>
+           </svg>
+        </button>
+
+        <div class="menu__container " id="menu__container" data-menu>
+         <div class="menu__navigation">
+            <ul class="nav__list list">
+                <li class="nav__item">
+                    <a href="./index.html" class="nav__link current">Студія</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__link">Контакти</a>
+                </li>
+            </ul>
+            
+         </div>
+         <div class="menu__contacts">
+            <ul class="contacts list">
+                <li class="contacts__item">
+                   <a class="contacts__link" href="mailto:info@devstudio.com" >
+                    <svg class="contacts__icon" width="20" height="16" >
+                    <use href="./images/icons.svg#icon-envelope" ></use>
+                   </svg>
+                   info@devstudio.com</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link" href="tel:+380961111111" >
+                        <svg class="contacts__icon" width="14" height="20" >
+                        <use href="./images/icons.svg#icon-smartphone" ></use>
+                       </svg>
+                       +38 096 111 11 11</a>
+                </li>
+                
+            </ul>
+        </nav>
+         </div>
+        </div>
+    </div>
+    
+
+</header>
     
 <!-- Main section -->
     <main>  
@@ -191,7 +210,11 @@
                 <li class="work__item">
                 <div class="work__label">
                     <a class="work__link" href="">
-                        <img src="./images/work1.jpg" alt="Back-end" width="370">
+                        <img
+                        srcset="./images/work1.jpg 1x,
+                        ./images/work1-2x.jpg 2x" 
+                        src="./images/work1.jpg" 
+                        alt="Back-end" width="370">
                         <p class="work__text">Десктопні додатки</p>
                     </a>
                 </div>   
@@ -199,7 +222,11 @@
                 <li class="work__item">
                 <div class="work__label">
                     <a class="work__link" href="">
-                        <img src="./images/work2.jpg" alt="Front-End" width="370">
+                        <img
+                        srcset="./images/work2.jpg 1x,
+                        ./images/work2-2x.jpg 2x"   
+                        src="./images/work2.jpg" 
+                        alt="Front-End" width="370">
                         <p class="work__text">Мобільні додатки</p>
                     </a>
                 </div>  
@@ -207,7 +234,11 @@
                 <li class="work__item">
                     <div class="work__label">
                     <a class="work__link" href="">
-                        <img  src="./images/work3.jpg" alt="Дизайн" width="370">
+                        <img 
+                        srcset="./images/work3.jpg 1x,
+                        ./images/work3-2x.jpg 2x"    
+                        src="./images/work3.jpg" 
+                        alt="Дизайн" width="370">
                         <p class="work__text">Дизайнерські рішенння</p>
                     </a>
                 </div>
@@ -221,7 +252,36 @@
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="team__list list">
                     <li class="team__item">
-                        <img src="./images/team1.jpg" alt="Чоловік в бордовій рубашці" width="270">
+                        <picture>
+                            <!-- <source
+                              srcset="./images/team1.jpg 1x,
+                                ./images/1/team1-2x.jpg 2x"
+                              media="(min-width: 1200px)"
+                            />
+                            <source
+                              srcset="./images/team1-tab.jpg 1x,
+                              ./images/1/team1-tab-2x.jpg 2x"
+                              media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="./images/team1-mob.jpg 1x,
+                            ./images/1/team1-mob-2x.jpg 2x"
+                              media="(max-width: 767px)"
+                            />
+                            <img 
+                               
+                            src="./images/team1-mob.jpg" 
+                            alt="Чоловік в бордовій рубашці" 
+                            width="450">
+                        
+                        </picture> -->
+                        <img 
+                               
+                            src="./images/team1.jpg" 
+                            alt="Чоловік в бордовій рубашці" 
+                            width="270">
+                        
+                       
                         <div class="team__box ">
                         <h3 class="team__title">Ігор Дем'яненко</h3>
                         <p class="team__text">Product Designer</p>
@@ -273,7 +333,33 @@
                     </div>
                     </li>
                     <li class="team__item ">
-                        <img src="./images/team2.jpg" alt="Жінка в піджаку" width="270">
+                        <!-- <picture>
+                            <source
+                              srcset="./images/team2.jpg 1x,
+                                ./images/1/team2-2x.jpg 2x"
+                              media="(min-width: 1200px)"
+                            />
+                            <source
+                              srcset="./images/team2-tab.jpg 1x,
+                              ./images/1/team2-tab-2x.jpg 2x"
+                              media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="./images/team2-mob.jpg 1x,
+                            ./images/1/team2-mob-2x.jpg 2x"
+                              media="(max-width: 767px)"
+                            />
+                            <img 
+                        src="./images/team2-mob.jpg" 
+                        alt="Жінка в піджаку" 
+                        width="450">
+                        
+                        </picture> -->
+                        <img 
+                        src="./images/team2.jpg" 
+                        alt="Жінка в піджаку" 
+                        width="270">
+                       
                         <div class="team__box ">
                         <h3 class="team__title">Ольга Рєпіна</h3>
                         <p class="team__text">Frontend Developer</p>
@@ -324,7 +410,33 @@
                     </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team3.jpg" alt="Чоловік в небесній рубашці" width="270">
+                        <!-- <picture>
+                            <source
+                              srcset="./images/team3.jpg 1x,
+                                ./images/1/team3-2x.jpg 2x"
+                              media="(min-width: 1200px)"
+                            />
+                            <source
+                              srcset="./images/team3-tab.jpg 1x,
+                              ./images/1/team3-tab-2x.jpg 2x"
+                              media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="./images/team3-mob.jpg 1x,
+                            ./images/1/team3-mob-2x.jpg 2x"
+                              media="(max-width: 767px)"
+                            />
+                            <img
+                        src="./images/team3-mob.jpg"
+                        alt="Чоловік в небесній рубашці" 
+                        width="450"/>
+                        
+                        </picture> -->
+                        <img
+                        src="./images/team3.jpg"
+                        alt="Чоловік в небесній рубашці" 
+                        width="270"/>
+                       
                         <div class="team__box">
                         <h3 class="team__title">Микола Тарасов</h3>
                         <p class="team__text">Marketing</p>
@@ -375,7 +487,32 @@
                     </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team4.jpg" alt="Чоловік в чорній футболці" width="270">
+                        <!-- <picture>
+                            <source
+                              srcset="./images/team4.jpg 1x,
+                                ./images/1/team4-2x.jpg 2x"
+                              media="(min-width: 1200px)"
+                            />
+                            <source
+                              srcset="./images/team4-tab.jpg 1x,
+                              ./images/1/team4-tab-2x.jpg 2x"
+                              media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="./images/team4-mob.jpg 1x,
+                            ./images/1/team4-mob-2x.jpg 2x"
+                              media="(max-width: 767px)"
+                            />
+                            <img 
+                        src="./images/team4-mob.jpg" 
+                        alt="Чоловік в чорній футболці" 
+                        width="450"/>
+                        
+                        </picture> -->
+                        <img 
+                        src="./images/team4.jpg" 
+                        alt="Чоловік в чорній футболці" 
+                        width="270"/>
                         <div class="team__box">
                         <h3 class="team__title">Михайло Єрмаков</h3>
                         <p class="team__text">UI Designer</p>
@@ -578,7 +715,12 @@
         
         
         
-        
+        <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+      <script defer src="js/mobile-menu.js"></script>
         <script src="./js/modal.js"></script>
 </body>
 </html>
