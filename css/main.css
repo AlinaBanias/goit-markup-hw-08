@@ -65,6 +65,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -167,6 +171,11 @@ span {
   color: #212121;
   transition: color var(--anim-fast);
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
 
 .nav__list .nav__item + .nav__item {
   margin-left: 50px;
@@ -192,7 +201,7 @@ span {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4%;
+  bottom: -2%;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
@@ -208,6 +217,19 @@ span {
   margin-left: auto;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    flex-direction: row;
+    gap: 0;
+  }
+}
 
 .contacts__link {
   display: flex;
@@ -219,21 +241,32 @@ span {
   color: var(--accent-color);
   opacity: 1;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: flex;
+  }
+}
 
-.contacts .contacts__item + .contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .contacts .contacts__link {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
   color: rgb(117, 117, 117);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02;
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .contacts .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__link:hover,
@@ -644,12 +677,11 @@ span {
 }
 
 .gallery__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
 }
 .gallery__item:nth-child(3n) {
   margin-right: 0px;
 }
-
 .gallery__link {
   display: block;
   text-decoration: none;
@@ -857,6 +889,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--anim-fast);
@@ -864,8 +897,7 @@ span {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 100%;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -899,7 +931,7 @@ span {
 }
 
 .form {
-  width: 528px;
+  width: 100%;
   min-height: 580px;
   padding: 40px;
 }
@@ -956,6 +988,7 @@ span {
 
 .form__input {
   width: 448px;
+  width: 100%;
   height: 40px;
   padding: 12px 42px;
   outline: transparent;
@@ -980,6 +1013,7 @@ span {
 
 .form__comment {
   width: 448px;
+  width: 100%;
   height: 120px;
   resize: none;
   padding: 12px 16px;
@@ -1048,6 +1082,11 @@ span {
   background-color: transparent;
   border: none;
 }
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
 
 .menu__button .icon-cross {
   display: none;
@@ -1085,6 +1124,11 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 
 .menu__button--close {
@@ -1134,7 +1178,6 @@ span {
 }
 
 .menu-soc {
-  position: relative;
   display: flex;
   margin-bottom: 48px;
 }
