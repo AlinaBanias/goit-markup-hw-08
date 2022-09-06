@@ -1,16 +1,13 @@
 .form-footer {
-    // 
-    // 
     display: block;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    // 
-    margin-bottom: 23px;
+    
   @media screen and (min-width: 1200px){
     width: 578px;
-    display: flex;
-    margin-left: 93px;
+    
+    
     text-align: start;
   }
   }

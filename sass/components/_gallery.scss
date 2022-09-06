@@ -18,6 +18,7 @@
       overflow: hidden;
     }
     &__title-text {
+      flex-grow: 1;
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 24px;
@@ -27,6 +28,7 @@
       border-right: 1px solid #eeeeee;
     }
     &__title {
+      letter-spacing: 0.06em;
       color: var(--primary-text-color);
       font-size: 18px;
       line-height: 2;
@@ -41,7 +43,7 @@
   }
   .gallery__item {
     width: 100%;
-   margin-bottom: 30px;
+   
     &:nth-child(3n) {
       margin-right: 0px;
     }
@@ -55,6 +57,11 @@
       margin-bottom: 0;
    }
   }
+  .gallery__item:not(:last-child) {
+    @media screen and (max-width: 767px){
+      margin-bottom:30px;
+    }
+  }
 
   .gallery__link {
     display: block;
@@ -66,6 +73,11 @@
     &:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
       0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+  @media screen and (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   }
   

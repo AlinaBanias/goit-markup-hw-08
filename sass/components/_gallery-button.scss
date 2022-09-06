@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    & .gallery-button__item + .gallery-button__item {
-      margin-left: 8px;
-    }
+    // & .gallery-button__item + .gallery-button__item {
+    //   margin-left: 8px;
+    // }
   }
   
   .gallery-button__link {
