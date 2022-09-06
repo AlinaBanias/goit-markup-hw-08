@@ -92,7 +92,7 @@ body {
     width: 1200px;
   }
 }
-span {
+.logo__span {
   color: var(--accent-color);
 }
 
@@ -292,7 +292,6 @@ span {
 
 .benefits__list .benefits__item {
   width: 100%;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .benefits__list {
@@ -313,6 +312,10 @@ span {
   .benefits__list .benefits__item {
     width: 270px;
   }
+}
+
+.benefits__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .benefits__title {
