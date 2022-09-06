@@ -1,5 +1,7 @@
 .gallery-button__list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
     margin-bottom: 50px;
 
