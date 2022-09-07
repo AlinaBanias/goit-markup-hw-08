@@ -2,12 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
+    
     margin-bottom: 30px;
 
     // & .gallery-button__item + .gallery-button__item {
     //   margin-left: 8px;
     // }
+    @media screen and (min-width: 768px){
+     justify-content: center;
+    }
   }
   
   .gallery-button__link {
